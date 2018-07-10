@@ -1,0 +1,6 @@
+CREATE TABLE grupo
+( 
+cod_grupo serial primary key not null constraint grupo_key_primaria,
+orientacion_grupo int references orientacion (cod_orientacion) constraint grupo_fk_orientacion_grupo not null,
+baja boolean NOT NULL constraint grupo_baja
+);
