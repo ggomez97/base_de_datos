@@ -33,3 +33,6 @@ nota int check (nota > 0 and nota < 13),
 tipo varchar(30) check (tipo in ('Oral','Escrito','Proyecto')) not null , 
 baja boolean NOT NULL constraint nota_baja
 );
+pepe 
+
+
