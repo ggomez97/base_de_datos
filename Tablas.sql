@@ -31,4 +31,4 @@ ci_docente integer references persona (ci) constraint lista_ci_docente_fk_person
 baja boolean NOT NULL constraint lista_baja
 )
 
-
+s
