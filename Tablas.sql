@@ -112,3 +112,10 @@ create table relacion_alumno_pertence_grupo
     fk_ci_alumno integer references persona (ci) constraint relacion_alumno_pertence_grupo_fk_ci_alumno not null,
     PRIMARY KEY (fk_cod_grupo, fk_ci_alumno) CONSTRAINT relacion_alumno_pertenece_grupo_primarias
 );
+
+create table relacion_docente_dicta_materia
+(
+    fk_cod_materia integer references materia (cod_materia) constraint relacion_docente_dicta_materia_fk_cod_materia not null ,
+    fk_ci_docente integer references persona (ci) constraint relacion_docente_dicta_materia_fk_ci_docente not null,
+    PRIMARY KEY (fk_cod_materia, fk_ci_docente) CONSTRAINT relacion_docente_dicta_materia_primarias
+);
