@@ -49,10 +49,16 @@ email varchar (50),
 sexo char not null,
 baja boolean NOT NULL CONSTRAINT persona_baja
 );
+
+
+
 #########################################################################################
 CREACION DE LAS
 ########################################################################################
+
+
 create table relacion_persona_pertence_instituto
 (fk_cod_instituto integer references instituto (cod_instituto) not null constraint relacion_persona_pertence_instituto_fk_instituto,
 cod_ciudad integer references ciudad (cod_ciudad) constraint relacion_persona_pertence_instituto_fk_ciudad not null
 );
+
