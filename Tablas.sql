@@ -32,7 +32,7 @@ create table orientacion
 
  create table grupo 
 (
-    cod_grupo serial primary key constraint grupo_primaria,
+    cod_grupo serial primary key constraint grupo_primaria not null,
     fk_cod_orientacion integer references orientacion (cod_orientacion) constraint grupo_fk_cod_orientacion, 
     baja boolean not null constraint grupor_baja
 );
