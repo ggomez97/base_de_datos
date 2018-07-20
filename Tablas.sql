@@ -49,11 +49,11 @@ CREATE TABLE persona
     telefono varchar (100) not null,
     dir_calle varchar (100) not null,
     dir_numero varchar (100) not null,
-    num_funcionario serial not null,
+    num_funcionario int,
     grado integer CHECK ( grado > 0 AND grado < 8),
     nota_final_proyecto integer check (nota_final_proyecto > 0 AND nota_final_proyecto < 13), 
     email varchar (50),
-    sexo char not null,
+    sexo char not null CHECK (sexo IN ('M', 'F','O')),
     baja boolean NOT NULL CONSTRAINT persona_baja
 );
 
@@ -157,3 +157,11 @@ VALUES ("5", "", "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y 
 ############################################################################################################################################################################################################
 DA ERROR DE DATOS REPETIDO PERO ESTA BIEN IGUAL
 ############################################################################################################################################################################################################
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("48543076","Gabriel","Fernando","Gomez","Mendaro","092055380","Bernardo susviela esq. ramon caceres","4117","","","","gabito.mini@gmail.com","M","f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("15987414","Pedro","Jose","Aguiar","Rodrigez","092987666","Castro","117","","","","pedro.jose@gmail.com","M","f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("27612142","Nestor","","Kirtchnner","","092420420","Casa rosada","1517","","","","falso.comunista@gmail.com","M","f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("15987414","Pedro","Jose","Aguiar","Rodrigez","092987666","Castro","117","","","","pedro.jose@gmail.com","M","f");
