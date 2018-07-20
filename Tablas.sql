@@ -34,7 +34,7 @@ create table orientacion
 
  create table grupo 
 (
-    cod_grupo serial primary key constraint grupo_primaria,
+    cod_grupo serial primary key constraint grupo_primaria not null,
     fk_cod_orientacion integer references orientacion (cod_orientacion) constraint grupo_fk_cod_orientacion, 
     baja boolean not null constraint grupor_baja
 );
@@ -126,6 +126,7 @@ create table relacion_alumno_tiene_materia
 fk_ci_alumno integer references persona (ci) constraint relacion_alumno_tiene_materia_fk_ci_alumno not null,
 PRIMARY KEY (fk_cod_materia, fk_ci_alumno) CONSTRAINT relacion_alumno_tiene_materia_primarias
 );
+<<<<<<< HEAD
 
 #########################################################################################
 INGRESO DE DATOS
@@ -156,3 +157,5 @@ VALUES ("4", "6", "Escuela Tecnica Alfredo Zitarrosa", "Ruta uno KM veintinueve"
 INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
 VALUES ("5", "2", "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñez", "43526757:43522280:43528045", "escuelatecnica@gmail.com", "f" ,"Mariana Morales", "Wilson Monce" );
 
+=======
+>>>>>>> 1c6bda86c33bf722dd4bc96dd2bdd9d5f626f13a
