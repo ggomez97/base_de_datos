@@ -14,11 +14,13 @@ create table ciudad
 create table instituto
 (
     cod_instituto serial not null primary key constraint instituto_primaria,
-    cod_ciudad integer references ciudad (cod_ciudad) constraint instituto_ci not null,
+    fk_cod_ciudad integer references ciudad (cod_ciudad) constraint instituto_ci not null,
     nombre_instituto varchar (50) not null,
     calle_instituto varchar (50) not null,
     telefonos varchar (100)not null,
     email varchar (80) not null,
+    directora varchar (20) not null,
+    subdirectora varchar (20) not null,
     baja boolean not null constraint instituto_baja
 );
 
@@ -47,9 +49,9 @@ CREATE TABLE persona
     telefono varchar (100) not null,
     dir_calle varchar (100) not null,
     dir_numero varchar (100) not null,
-    fk_grupo_alumno integer references grupo (cod_grupo) constraint persona_grupo_alumno_fk_grupo,
     num_funcionario serial not null,
-    grado integer not null CHECK ( grado > 0 AND grado < 8), 
+    grado integer CHECK ( grado > 0 AND grado < 8),
+    nota_final_proyecto integer check (nota_final_proyecto > 0 AND nota_final_proyecto < 13), 
     email varchar (50),
     sexo char not null,
     baja boolean NOT NULL CONSTRAINT persona_baja
@@ -119,9 +121,38 @@ create table relacion_docente_dicta_materia
     fk_ci_docente integer references persona (ci) constraint relacion_docente_dicta_materia_fk_ci_docente not null,
     PRIMARY KEY (fk_cod_materia, fk_ci_docente) CONSTRAINT relacion_docente_dicta_materia_primarias
 );
-
 create table relacion_alumno_tiene_materia
 (fk_cod_materia integer references materia (cod_materia) constraint relacion_alumno_tiene_materia_fk_cod_materia not null ,
 fk_ci_alumno integer references persona (ci) constraint relacion_alumno_tiene_materia_fk_ci_alumno not null,
 PRIMARY KEY (fk_cod_materia, fk_ci_alumno) CONSTRAINT relacion_alumno_tiene_materia_primarias
 );
+
+#########################################################################################
+INGRESO DE DATOS
+########################################################################################
+
+INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
+VALUES ( "1","Montevideo" , "Montevideo" , "f" );
+INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
+VALUES ( "2","Florida" , "Florida" , "f" );
+INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
+VALUES ( "3","Canelones" , "Canelones" , "f" );
+INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
+VALUES ( "4","Florida" , "Florida" , "f" );
+INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
+VALUES ( "5","Libertad" , "San Jose" , "f" );
+INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
+VALUES ( "6","Ciudad del plata" , "San Jose" , "f" );
+
+
+INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ("1", "1", "Escuela Técnica Arroyo Seco", "Av. Agraciada Esq. Aguilar", "29243865:29243856", "etas010@gmail.com", "f" ,"Álvaro Ricca", "Adriana Di Loreto" );
+INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ("2", "3", "Escuela Tecnica Atlantida", "Republica Argentina esq. Republica de chile", "43723507:43728578", "utuatlantida@adinet.com.uy", "f" ,"Carmen Blanco", "Maria Spada" );
+INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ("3", "5", "Escuela Tecnica San Jose Maria Espinola", "Sarabdu esq.Zorrilla", "43422064:4342286", "utusanjose@gmail.com", "f" ,"Adriana Delgado", "Maria Castro" );
+INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ("4", "6", "Escuela Tecnica Alfredo Zitarrosa", "Ruta uno KM veintinueve", "23472021:23475197:23471459", "utualfredozitarrosa@gmail.com", "f" ,"Silva Silveira", "Daiana Silva" );
+INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ("5", "2", "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñez", "43526757:43522280:43528045", "escuelatecnica@gmail.com", "f" ,"Mariana Morales", "Wilson Monce" );
+
