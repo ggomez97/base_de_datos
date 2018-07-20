@@ -14,8 +14,8 @@ create table ciudad
 create table instituto
 (
     cod_instituto serial not null primary key constraint instituto_primaria,
-    fk_cod_ciudad integer references ciudad (cod_ciudad) constraint instituto_ci not null,
-    nombre_instituto varchar (50) not null,
+    fk_cod_ciudad integer references ciudad (cod_ciudad) constraint instituto_fk_cod_ciudad not null,
+    nom_instituto varchar (50) not null,
     calle_instituto varchar (50) not null,
     telefonos varchar (100)not null,
     email varchar (80) not null,
@@ -27,7 +27,7 @@ create table instituto
 create table orientacion 
 (
     cod_orientacion serial primary key constraint orientacion_primaria not null,
-    nomb_orientacion varchar (20) not null,
+    nom_orientacion varchar (20) not null,
     descripcion lvarchar (400),
     baja boolean not null constraint orientacion_baja
 );
@@ -36,12 +36,12 @@ create table orientacion
 (
     cod_grupo serial primary key constraint grupo_primaria not null,
     fk_cod_orientacion integer references orientacion (cod_orientacion) constraint grupo_fk_cod_orientacion, 
-    baja boolean not null constraint grupor_baja
+    baja boolean not null constraint grupo_baja
 );
 
 CREATE TABLE persona
 (
-    ci integer PRIMARY KEY  CONSTRAINT persona_primaria,
+    ci integer PRIMARY KEY  CONSTRAINT persona_primaria not null,
     p_nombre varchar (20) NOT NULL,
     s_nombre varchar (20),
     p_apellido varchar (20) not null,
@@ -126,7 +126,6 @@ create table relacion_alumno_tiene_materia
 fk_ci_alumno integer references persona (ci) constraint relacion_alumno_tiene_materia_fk_ci_alumno not null,
 PRIMARY KEY (fk_cod_materia, fk_ci_alumno) CONSTRAINT relacion_alumno_tiene_materia_primarias
 );
-<<<<<<< HEAD
 
 #########################################################################################
 INGRESO DE DATOS
@@ -139,23 +138,22 @@ VALUES ( "2","Florida" , "Florida" , "f" );
 INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
 VALUES ( "3","Canelones" , "Canelones" , "f" );
 INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "4","Florida" , "Florida" , "f" );
+VALUES ( "4","Libertad" , "San Jose" , "f" );
 INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "5","Libertad" , "San Jose" , "f" );
-INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "6","Ciudad del plata" , "San Jose" , "f" );
+VALUES ( "5","Ciudad del plata" , "San Jose" , "f" );
 
 
 INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("1", "1", "Escuela Técnica Arroyo Seco", "Av. Agraciada Esq. Aguilar", "29243865:29243856", "etas010@gmail.com", "f" ,"Álvaro Ricca", "Adriana Di Loreto" );
+VALUES ("1", "", "Escuela Técnica Arroyo Seco", "Av. Agraciada Esq. Aguilar", "29243865:29243856", "etas010@gmail.com", "f" ,"Álvaro Ricca", "Adriana Di Loreto" );
 INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("2", "3", "Escuela Tecnica Atlantida", "Republica Argentina esq. Republica de chile", "43723507:43728578", "utuatlantida@adinet.com.uy", "f" ,"Carmen Blanco", "Maria Spada" );
+VALUES ("2", "", "Escuela Tecnica Atlantida", "Republica Argentina esq. Republica de chile", "43723507:43728578", "utuatlantida@adinet.com.uy", "f" ,"Carmen Blanco", "Maria Spada" );
 INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("3", "5", "Escuela Tecnica San Jose Maria Espinola", "Sarabdu esq.Zorrilla", "43422064:4342286", "utusanjose@gmail.com", "f" ,"Adriana Delgado", "Maria Castro" );
+VALUES ("3", "", "Escuela Tecnica San Jose Maria Espinola", "Sarabdu esq.Zorrilla", "43422064:4342286", "utusanjose@gmail.com", "f" ,"Adriana Delgado", "Maria Castro" );
 INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("4", "6", "Escuela Tecnica Alfredo Zitarrosa", "Ruta uno KM veintinueve", "23472021:23475197:23471459", "utualfredozitarrosa@gmail.com", "f" ,"Silva Silveira", "Daiana Silva" );
+VALUES ("4", "", "Escuela Tecnica Alfredo Zitarrosa", "Ruta uno KM veintinueve", "23472021:23475197:23471459", "utualfredozitarrosa@gmail.com", "f" ,"Silva Silveira", "Daiana Silva" );
 INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("5", "2", "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñez", "43526757:43522280:43528045", "escuelatecnica@gmail.com", "f" ,"Mariana Morales", "Wilson Monce" );
+VALUES ("5", "", "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñez", "43526757:43522280:43528045", "escuelatecnica@gmail.com", "f" ,"Mariana Morales", "Wilson Monce" );
 
-=======
->>>>>>> 1c6bda86c33bf722dd4bc96dd2bdd9d5f626f13a
+############################################################################################################################################################################################################
+DA ERROR DE DATOS REPETIDO PERO ESTA BIEN IGUAL
+############################################################################################################################################################################################################
