@@ -46,13 +46,13 @@ CREATE TABLE persona
     s_nombre varchar (20),
     p_apellido varchar (20) not null,
     s_apellido varchar (20) not null,
+    tipo varchar (20) not null CHECK (tipo in ('Alumno','Docente','Funcionario de la UTU')),
     telefono varchar (100) not null,
     dir_calle varchar (100) not null,
     dir_numero varchar (100) not null,
-    num_funcionario int,
     grado integer CHECK ( grado > 0 AND grado < 8),
     nota_final_proyecto integer check (nota_final_proyecto > 0 AND nota_final_proyecto < 13), 
-    email varchar (50),
+    email varchar (50),    
     sexo char not null CHECK (sexo IN ('M', 'F','O')),
     baja boolean NOT NULL CONSTRAINT persona_baja
 );
@@ -124,6 +124,7 @@ create table relacion_docente_dicta_materia
 create table relacion_alumno_tiene_materia
 (fk_cod_materia integer references materia (cod_materia) constraint relacion_alumno_tiene_materia_fk_cod_materia not null ,
 fk_ci_alumno integer references persona (ci) constraint relacion_alumno_tiene_materia_fk_ci_alumno not null,
+nota_final_materia int check (nota_final_materia > 0 and nota_final_materia < 13) constraint nota_final_materia,
 PRIMARY KEY (fk_cod_materia, fk_ci_alumno) CONSTRAINT relacion_alumno_tiene_materia_primarias
 );
 
@@ -157,11 +158,11 @@ VALUES ("5", "", "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y 
 ############################################################################################################################################################################################################
 DA ERROR DE DATOS REPETIDO PERO ESTA BIEN IGUAL
 ############################################################################################################################################################################################################
-INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("48543076","Gabriel","Fernando","Gomez","Mendaro","092055380","Bernardo susviela esq. ramon caceres","4117","","","","gabito.mini@gmail.com","M","f");
-INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("15987414","Pedro","Jose","Aguiar","Rodrigez","092987666","Castro","117","","","","pedro.jose@gmail.com","M","f");
-INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("27612142","Nestor","","Kirtchnner","","092420420","Casa rosada","1517","","","","falso.comunista@gmail.com","M","f");
-INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, telefono, dir_calle, dir_numero, num_funcionario, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("15987414","Pedro","Jose","Aguiar","Rodrigez","092987666","Castro","117","","","","pedro.jose@gmail.com","M","f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("48543076","Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela esq. ramon caceres","4117","8","","gabito.mini@gmail.com","M","f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("15987414","Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro","117","","","pedro.jose@gmail.com","M","f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("27612142","Nestor","","Kirtchnner","Alumno","092420420","Casa rosada","1517","","","falso.comunista@gmail.com","M","f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
+VALUES ("24517632","Ana","","Gamio","Rodrigez","Docente","094563219","Isla de flores","647","6","","ana.gamio@gmail.com","F","f");
