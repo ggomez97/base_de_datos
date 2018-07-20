@@ -122,47 +122,53 @@ create table relacion_docente_dicta_materia
     PRIMARY KEY (fk_cod_materia, fk_ci_docente) CONSTRAINT relacion_docente_dicta_materia_primarias
 );
 create table relacion_alumno_tiene_materia
-(fk_cod_materia integer references materia (cod_materia) constraint relacion_alumno_tiene_materia_fk_cod_materia not null ,
-fk_ci_alumno integer references persona (ci) constraint relacion_alumno_tiene_materia_fk_ci_alumno not null,
-nota_final_materia int check (nota_final_materia > 0 and nota_final_materia < 13) constraint nota_final_materia,
-PRIMARY KEY (fk_cod_materia, fk_ci_alumno) CONSTRAINT relacion_alumno_tiene_materia_primarias
+(
+    fk_cod_materia integer references materia (cod_materia) constraint relacion_alumno_tiene_materia_fk_cod_materia not null ,
+    fk_ci_alumno integer references persona (ci) constraint relacion_alumno_tiene_materia_fk_ci_alumno not null,
+    nota_final_materia int check (nota_final_materia > 0 and nota_final_materia < 13) constraint nota_final_materia,
+    PRIMARY KEY (fk_cod_materia, fk_ci_alumno) CONSTRAINT relacion_alumno_tiene_materia_primarias
 );
 
 #########################################################################################
 INGRESO DE DATOS
 ########################################################################################
 
-INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "1","Montevideo" , "Montevideo" , "f" );
-INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "2","Florida" , "Florida" , "f" );
-INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "3","Canelones" , "Canelones" , "f" );
-INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "4","Libertad" , "San Jose" , "f" );
-INSERT INTO Ciudad (cod_ciudad, nom_ciudad, nom_departamento,baja)
-VALUES ( "5","Ciudad del plata" , "San Jose" , "f" );
+INSERT INTO Ciudad (nom_ciudad, nom_departamento,baja)
+VALUES ("Montevideo" , "Montevideo" , "f" );
+INSERT INTO Ciudad (nom_ciudad, nom_departamento,baja)
+VALUES ("Florida" , "Florida" , "f" );
+INSERT INTO Ciudad (nom_ciudad, nom_departamento,baja)
+VALUES ("Canelones" , "Canelones" , "f" );
+INSERT INTO Ciudad (nom_ciudad, nom_departamento,baja)
+VALUES ("Libertad" , "San Jose" , "f" );
+INSERT INTO Ciudad (nom_ciudad, nom_departamento,baja)
+VALUES ("Ciudad del plata" , "San Jose" , "f" );
 
 
-INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("1", "", "Escuela Técnica Arroyo Seco", "Av. Agraciada Esq. Aguilar", "29243865:29243856", "etas010@gmail.com", "f" ,"Álvaro Ricca", "Adriana Di Loreto" );
-INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("2", "", "Escuela Tecnica Atlantida", "Republica Argentina esq. Republica de chile", "43723507:43728578", "utuatlantida@adinet.com.uy", "f" ,"Carmen Blanco", "Maria Spada" );
-INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("3", "", "Escuela Tecnica San Jose Maria Espinola", "Sarabdu esq.Zorrilla", "43422064:4342286", "utusanjose@gmail.com", "f" ,"Adriana Delgado", "Maria Castro" );
-INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("4", "", "Escuela Tecnica Alfredo Zitarrosa", "Ruta uno KM veintinueve", "23472021:23475197:23471459", "utualfredozitarrosa@gmail.com", "f" ,"Silva Silveira", "Daiana Silva" );
-INSERT INTO instituto (cod_instituto, cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
-VALUES ("5", "", "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñez", "43526757:43522280:43528045", "escuelatecnica@gmail.com", "f" ,"Mariana Morales", "Wilson Monce" );
+INSERT INTO instituto ( fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ( , "Escuela Técnica Arroyo Seco", "Av. Agraciada Esq. Aguilar", "29243865:29243856", "etas010@gmail.com", "f" ,"Álvaro Ricca", "Adriana Di Loreto" );
+INSERT INTO instituto ( fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ( , "Escuela Tecnica Atlantida", "Republica Argentina esq. Republica de chile", "43723507:43728578", "utuatlantida@adinet.com.uy", "f" ,"Carmen Blanco", "Maria Spada" );
+INSERT INTO instituto ( fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ( ,"Escuela Tecnica San Jose Maria Espinola", "Sarabdu esq.Zorrilla", "43422064:4342286", "utusanjose@gmail.com", "f" ,"Adriana Delgado", "Maria Castro" );
+INSERT INTO instituto (fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ( , "Escuela Tecnica Alfredo Zitarrosa", "Ruta uno KM veintinueve", "23472021:23475197:23471459", "utualfredozitarrosa@gmail.com", "f" ,"Silva Silveira", "Daiana Silva" );
+INSERT INTO instituto (fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
+VALUES ( , "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñez", "43526757:43522280:43528045", "escuelatecnica@gmail.com", "f" ,"Mariana Morales", "Wilson Monce" );
 
 ############################################################################################################################################################################################################
 DA ERROR DE DATOS REPETIDO PERO ESTA BIEN IGUAL
 ############################################################################################################################################################################################################
+IINSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
+VALUES (48543076,"Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela","4117","" , 9 ,"gabito.mini@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("48543076","Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela esq. ramon caceres","4117","8","","gabito.mini@gmail.com","M","f");
+VALUES (15987414,"Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro","117","","","pedro.jose@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("15987414","Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro","117","","","pedro.jose@gmail.com","M","f");
+VALUES (45673164,"Victoria","Josefina","Perez","Gato","Docente","097318663","Minas","67",2,"","victoria.perez@gmail.com","F","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("27612142","Nestor","","Kirtchnner","Alumno","092420420","Casa rosada","1517","","","falso.comunista@gmail.com","M","f");
-INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES ("24517632","Ana","","Gamio","Rodrigez","Docente","094563219","Isla de flores","647","6","","ana.gamio@gmail.com","F","f");
+VALUES (24517632,"Ana","","Gamio","Rodrigez","Docente","094563219","Isla de flores","647",6,"","ana.gamio@gmail.com","F","f");
+
+select ciudad.cod_ciudad,instituto.nom_instituto,ciudad.nom_departamento,ciudad.nom_ciudad
+from ciudad
+inner join instituto on ciudad.cod_ciudad=instituto.fk_cod_ciudad;
+
