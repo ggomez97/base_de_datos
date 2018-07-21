@@ -159,7 +159,7 @@ VALUES ( , "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñ
 ############################################################################################################################################################################################################
 DA ERROR DE DATOS REPETIDO PERO ESTA BIEN IGUAL
 ############################################################################################################################################################################################################
-IINSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
 VALUES (48543076,"Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela","4117","" , 9 ,"gabito.mini@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
 VALUES (15987414,"Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro","117","","","pedro.jose@gmail.com","M","f");
