@@ -1,100 +1,529 @@
-Aránzazu
-Bartolomé
-Basileo
-Beatriz
-Begoña
-Belén
-Beltrán
-Concepción
-Conrado
-Constancio
-Constantino
-Consuelo
-Cosme
-Cristian
-Cristina
-Cristóbal
-Daciano
-Dacio
-Dámaso
-Damián
-Daniel
-Dario
-David
-Demócrito
-Diego
-Dimas
-Dolores
-Ernesto
-Esdras
-Esiquio
-Esperanza
-Esteban
-Ester
-Esther
-Eugenia
-Eugenio
-Eulalia
-Eusebio
-Eva
-Evaristo
-Ezequiel
-Fabián
-Fabio
-Fabiola
-Facundo
-Fáti
-Fernando
-Fidel
-Genoveva
-Gerardo
-Germán
-Gertrudis
-Gisela
-Gloria
-Godofredo
-Gonzalo
-Gregorio
-Guado
-Hugo
-Humberto
-Ifigenia
-Ignacio
-Ildefonso
-Inés
-Inmaculada
-Inocencio
-Irene
-Ireneo
-Isaac
-Isabel
-Isaíulián
-Julio
-Justino
-Juvenal
-Ladislao
-Laura
-Laureano
-Lázaro
-Leandro
-Leocadia
-León
-Leonardo
-Leoncio
-Leonor
-Leopoldo
-Lidianuel
-Manuela
-Mar
-Marc
-Marcelino
-Marcelo
-Marci
-Pío
-Poncio
-Porfirio
-Primo
-Salvio
-Samuel
-Sandra
-Zacarías
+Aarón M
+Aaronit M
+Aba F
+Abaco M
+Abalen M
+Abbas M
+Abbie F
+Abbott M
+Abby F
+Abdala M
+Abdas M
+Abdecalas M
+Abdel M
+Abderico M
+Abdias M
+Abdiel M
+Abdieso M
+Abdo M
+Abdon M
+Abdul M
+Abdullah M
+Abe M
+Abel M
+Abelardo M
+Abelina F
+Abelino F
+Abenamar M
+Abenamor F
+Abencio M
+Barbato M
+Barbea F
+Barbelo M
+Barbra F
+Barcario M
+Barclay M
+Barcli F
+Barden M
+Bardo M
+Bardomiano M
+Barena F
+Baris M
+Barkev M
+Barlaan M
+Barlaam M
+Barnabas M
+Barnard M
+Barnett M
+Barney M
+Baroncio M
+Barrett M
+Barry M
+Barsabas M
+Barsanufio M
+Barsen M
+Barsimeo M
+Bart M
+Bartolo M
+Bartolome M
+Bartolomé M
+Bartolomea F
+Barton M
+Berjuhi A
+Berk M
+Berkeley M
+Berko M
+Bern M
+Berna F
+Bernabe M
+Bernabé M
+Bernabela F
+Bernabella F
+Bernadete F
+Bernadette F
+Bernadino M
+Bernadine F
+Bernadita F
+Bernard M
+Bernarda F
+Bernardette F
+Bernardina F
+Bernardino M
+Bernardita F
+Bernardo M
+Bernavé M
+Bernd M
+Berne M
+Berniago M
+Bernice F
+Berno M
+Bernie M
+Bernon M
+Bernwardo M
+Beronico M
+Calagero M
+Calanit A
+Calamanda F
+Calandia F
+Calandra F
+Calanico M
+Calanit F
+Calantha F
+Caldeolo M
+Calder M
+Caleb M
+Caledonia F
+Caledonio M
+Calel M
+Calen F
+Calepodio M
+Caley M
+Calfu A
+Calfú A
+Calhoun M
+Calian M
+Caligula M
+Calim M
+Calimaco M
+Calimerio M
+Calinica F
+Calinico M
+Danesa F
+Danett F
+Dani F
+Dania F
+Danica F
+Daniel M
+Daniela F
+Danielle F
+Danila F
+Danilo M
+Danimiro M
+Danina F
+Danira F
+Danisa F
+Danit F
+Danitza F
+Daniza F
+Danko M
+Danna F
+Dannae F
+Danny M
+Dante M
+Dantzel F
+Danya F
+Daphne F
+Daquel A
+Dara F
+Darby M
+Darciel M
+Darcy A
+Dardo M
+Darek M
+Caliope F
+Caliopio M
+Edilma F
+Ediltrudis F
+Edipo M
+Edisa F
+Edison M
+Edistio M
+Edisto M
+Edit F
+Edita F
+Edith F
+Edlyn A
+Edmee F
+Edmundo M
+Edna F
+Edouard M
+Edria F
+Edsel M
+Edson M
+Eduarda F
+Eduardo M
+Eduarne F
+Edubiges F
+Eduin M
+Eduino M
+Edurne F
+Eduviges F
+Eduvigis F
+Eduvijes F
+Eduvina F
+Edward M
+Edwardo M
+Edwin M
+Faustiniano M
+Faustino M
+Fausto M
+Favia F
+Favio M
+Fawn F
+Fawne F
+Faye F
+Fayina F
+Fazzio M
+Fe F
+Febadio M
+Febe F
+Febes F
+Febo M
+Febronio M
+Féde M
+Federica F
+Federico M
+Fedor M
+Fedora F
+Fedra F
+Feigue F
+Felcia F
+Felice F
+Felicia F
+Feliciana F
+Feliciano M
+Felicidad F
+Felicisima F
+Felicisimo M
+Gebhard M
+Gedeon M
+Gelasia F
+Gelasio M
+Gelsomio M
+Gema F
+Gemelo M
+Gemina F
+Gemini F
+Geminiano M
+Gemino M
+Gemma F
+Gena F
+Genadio M
+Genara F
+Genaro M
+Genciano M
+Gene M
+Genera F
+Generosa F
+Generoso M
+Genesio M
+Genesis A
+Genet F
+Geneva F
+Genevieve F
+Genna F
+Gennaro M
+Genoveva F
+Gentilina F
+Gento M
+Geoffrey M
+Halona F
+Halsey M
+Halul F
+Ham M
+Hamal M
+Haman M
+Hamilton M
+Hamlet M
+Hamlin M
+Hampartsum M
+Hamza M
+Hana F
+Hanae F
+Hanan F
+Hania F
+Hank M
+Hanka F
+Hanna F
+Hannah F
+Hanne F
+Hans M
+Hansol M
+Hanzila F
+Hara F
+Harden M
+Hardouino M
+Hardy M
+Harel M
+Harissa M
+Harith M
+Harkin M
+Harlan M
+Hortensia F
+Hortensio M
+Hortulano M
+Horus M
+Hosanna F
+Hosarsiph M
+Hosea M
+Hoshi F
+Hoshiko F
+Hospicio M
+Hossana F
+Houston M
+Howard M
+Howe M
+Howell M
+Huaiquil A
+Huaman M
+Huapi A
+Huara A
+Huara Hue F
+Huari A
+Huáscar M
+Huayra A
+Huayra Runa A
+Huayun A
+Huber M
+Hubert M
+Huberta F
+Huberto M
+Huechu A
+Hueco A
+Hueique A
+Isabelina F
+Isabelino M
+Isabella F
+Isabelle F
+Isabis F
+Isacar M
+Isachar M
+Isacio M
+Isadora F
+Isael M
+Isaí M
+Isaiah M
+Isaias M
+Isaías M
+Isalenia F
+Isam M
+Isao M
+Isaul M
+Isaura F
+Isauro M
+Isberga F
+Isel M
+Isela F
+Iselda F
+Iseo M
+Isha F
+Ishaiahu M
+Isiar F
+Isidora F
+Isidoro M
+Isidro M
+Isis F
+Javier M
+Javiera F
+Javorka F
+Jay A
+Jaya A
+Jayag M
+Jaydi F
+Jayma A
+Jaziel M
+Jazmin F
+Jazmín F
+Jazmine F
+Jazni F
+Jazz F
+Jean M
+Jean Luc M
+Jeanelle F
+Jeanette F
+Jeanne F
+Jeannette F
+Jed M
+Jeder M
+Jedfri F
+Jedidiah M
+Jedrek M
+Jefferson M
+Jeffrey M
+Jehiel M
+Jelani M
+Jelena F
+Jemima F
+Jemimah F
+Jemina F
+Jena F
+Jenara F
+Jenaro M
+Jenay F
+Jendayi F
+Jener M
+Jenifer F
+Jenna F
+Jennie F
+Jennifer F
+Kaoru A
+Kapono M
+Kapriel A
+Kara F
+Karan M
+Kareem M
+Karel F
+Karem F
+Karen F
+Karena F
+Karenina F
+Karibe A
+Karida F
+Karif M
+Karim M
+Karima F
+Karimah F
+Karin F
+Karina F
+Karine F
+Karis F
+Karl M
+Karla F
+Karli F
+Karma F
+Karol M
+Karolina F
+Karsten M
+Karumanta A
+Kasen M
+Kasi F
+Kasia F
+Lael F
+Laercio M
+Laertes M
+Laetitia F
+Lahela F
+Lahila F
+Lahual A
+Lahuen A
+Laia F
+Laial F
+Laila F
+Laraine F
+Laramie M
+Lareina F
+Lari F
+Larina F
+Larisa F
+Larissa F
+Lark F
+Laron M
+Larrimore M
+Larry M
+Lars M
+Lasca F
+Lassie F
+Lastenia F
+Laszlo M
+Lateefah F
+Latif M
+Latife F
+Latika F
+Latimer M
+Latino M
+Latisha F
+Latona F
+Laudelina F
+Lauden M
+Laudoaldo M
+Laudomia F
+Laughlin M
+Laumer M
+Laura F
+Laurana F
+Nombre Sexo
+Laureana F
+Laureano M
+Lauren F
+Laurena F
+Laurence M
+Laurencia F
+Laurencio M
+Laurent M
+Laurentina F
+Laurentino M
+Lauriana F
+Laurie F
+Laurina F
+Laurinda F
+Laurindo M
+Lauro M
+Lautaro M
+LaValle M
+Laveda F
+Laverne F
+Lavina F
+Lavinia F
+Laviña F
+Lavive F
+Lawler M
+Lawrence M
+Laya F
+Layla F
+Lazara F
+Lazaro M
+Lázaro M
+Lazarus M
+Lea F
+Leah F
+Leanan
+(acomp.) F
+Leander M
+Leandra F
+Leandro M
+Leanne F
+Lear M
+Learco M
+Leba F
+Lebana F
+Lebian M
+Leda F
+Ledah F
+Ledicia F
+Ledy F
+Lee M
+Leggett M
+Lei M
+Leia F
+Leib M
+Leibush M
+Leida F
+Leide F
+Leif M
+Leigh A
+Leiko F
+Leila F
+Leilani F
+Leilen F
+Leire F
+Leisa F
