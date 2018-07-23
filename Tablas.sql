@@ -34,15 +34,17 @@ create table orientacion
 
 CREATE TABLE turnos
 ( 
-    cod_turno serial primary key not null constraint turno_primaria,
+    cod_turno serial primary key constraint turno_primaria not null,
     tipo varchar (20) check (tipo in ('Matutino','Vespertino','Nocturno')) not null,
-    hora_inicio_fin varchar (30)not null,
-    baja boolean constraint grupo_baja NOT NULL
+    hora_inicio varchar (10) not null,
+    hora_fin varchar (10) not null,
+    baja boolean not null constraint turno_baja 
 );
 
  create table grupo 
 (
     cod_grupo serial primary key constraint grupo_primaria not null,
+    nom_grupo varchar (10) not null,
     fk_cod_orientacion integer references orientacion (cod_orientacion) constraint grupo_fk_cod_orientacion, 
     fk_cod_turno integer references turnos (cod_turno) constraint grupo_fk_cod_turno not null,
     baja boolean not null constraint grupo_baja
@@ -153,7 +155,6 @@ VALUES ("Libertad" , "San Jose" , "f" );
 INSERT INTO Ciudad (nom_ciudad, nom_departamento,baja)
 VALUES ("Ciudad del plata" , "San Jose" , "f" );
 
-
 INSERT INTO instituto ( fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
 VALUES ( , "Escuela Técnica Arroyo Seco", "Av. Agraciada Esq. Aguilar", "29243865:29243856", "etas010@gmail.com", "f" ,"Álvaro Ricca", "Adriana Di Loreto" );
 INSERT INTO instituto ( fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
@@ -164,10 +165,13 @@ INSERT INTO instituto (fk_cod_ciudad, nombre_instituto, calle_instituto, telefon
 VALUES ( , "Escuela Tecnica Alfredo Zitarrosa", "Ruta uno KM veintinueve", "23472021:23475197:23471459", "utualfredozitarrosa@gmail.com", "f" ,"Silva Silveira", "Daiana Silva" );
 INSERT INTO instituto (fk_cod_ciudad, nombre_instituto, calle_instituto, telefonos, email, baja, directora, subdirectora)
 VALUES ( , "Escuela Tecnica Superior Florida", "Gral.Flores esq. Batlle y Ordoñez", "43526757:43522280:43528045", "escuelatecnica@gmail.com", "f" ,"Mariana Morales", "Wilson Monce" );
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
+VALUES (47911800, "Martin", " " ,"Kasamajeu" , "del Pino" ,"Alumno", "092228484", "Camino de los granjeros", "4860","" ,"","martin@casamayou.net", "O", "f");
 
 ############################################################################################################################################################################################################
 DA ERROR DE DATOS REPETIDO PERO ESTA BIEN IGUAL
 ############################################################################################################################################################################################################
+
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
 VALUES (48543076,"Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela","4117","" , 8 ,"gabito.mini@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
@@ -183,9 +187,7 @@ VALUES (16921234,"Kima","Soul","Reguetto","Perez","Alumno","092222999","Margarit
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
 VALUES (35469987,"Ice","Cube","Amerikka","Wanted","Alumno","092000999","Nipple","1237","", 9 ,"11xxx@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (55564155,"Rodrigo"," ","Gonzales","Gutierrez","Alumno","091225430","Grecia","8437", "" , "" ,"42x51xx@gmail.com","M","f");
-
-
+VALUES (55564155,"Rodrigo", "","Gonzales","Gutierrez","Alumno","091225430","Grecia","8437", "" , "" ,"42x51xx@gmail.com","M","f");
 
 insert into relacion_persona_pertence_instituto (fk_cod_instituto,fk_ci_persona)
 values (4,15987414);
@@ -206,8 +208,6 @@ values (3,48543076)
 
 insert into orientacion (nom_orientacion, descripcion,baja)
 values ("Administracion", '"Aca va una descripcion"',"f");
-
-
 insert into orientacion (nom_orientacion, descripcion,baja)
 values ("Agrario", '"Aca va una descripcion"',"f");
 insert into orientacion (nom_orientacion, descripcion,baja)
@@ -237,7 +237,6 @@ values ("Termodinamica", '"Aca va una descripcion"',"f");
 insert into orientacion (nom_orientacion, descripcion,baja)
 values ("Turismo", '"Aca va una descripcion"',"f");
 
-
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (2,"APT","f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
@@ -252,7 +251,6 @@ insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (2,"Matematica A","f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (2,"Matematica B","f");
-
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (3,"Agronegocios","f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
@@ -265,7 +263,6 @@ insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (3,"Sistemas Productivos Agrarios Vegetales","f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (3,"Sistemas Productivos Agrarios Animal","f");
-
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (4,"Ingles Tecnico","f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
@@ -282,8 +279,36 @@ insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (4,'Avionica IV "Navegacion"' ,"f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (4,"Practicas y Materiales de Mantenimiento II" ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (5,"Administracion y Gestion de Obras III" ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (5,"Informatica Aplicada C.A.D III" ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (5,"Procesos Constructivos III" ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (5,"Tecn. del Diseño de la Construccion III" ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (5,"Teoricas Constructivas Contemporaneas" ,"f")
 
+INSERT INTO turnos(tipo, hora_inicio, hora_fin,baja)
+VALUES ("Matutino", "6:55", "12:00", "f");
+INSERT INTO turnos(tipo, hora_inicio, hora_fin,baja)
+VALUES ("Vespertino", "12:35", "18:55", "f");
+INSERT INTO turnos(tipo, hora_inicio, hora_fin,baja)
+VALUES ("Nocturno", "19:00:", "23:55", "f");
 
+INSERT INTO grupo(nom_grupo, fk_cod_orientacion, fk_cod_turno, baja)
+VALUES ("3°AA",2, 1, "f");
+INSERT INTO grupo(nom_grupo, fk_cod_orientacion, fk_cod_turno, baja)
+VALUES ("3°AB",2, 1, "f");
+INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
+VALUES ("3°BA",3, 1, "f");
+INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
+VALUES ("3°BB",3, 2, "f");
+INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
+VALUES ("3°CA",4, 3, "f");
+INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
+VALUES ("3°CB",4, 3, "f");
 
 
 
