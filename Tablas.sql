@@ -290,7 +290,7 @@ values (5,"Procesos Constructivos III" ,"f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (5,"Tecn. del Diseño de la Construccion III" ,"f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
-values (5,"Teoricas Constructivas Contemporaneas" ,"f")
+values (5,"Teoricas Constructivas Contemporaneas" ,"f");
 
 INSERT INTO turnos(tipo, hora_inicio, hora_fin,baja)
 VALUES ("Matutino", "6:55", "12:00", "f");
@@ -314,7 +314,8 @@ VALUES ("3°CB",4, 3, "f");
 
 insert into lista (fk_cod_grupo,fk_ci_docente, fk_cod_materia, baja)
 values (1,48543076,2,"f");
-
+insert into nota (fechahora,fk_ci_alumno,fk_cod_lista,nota,tipo_nota,baja)
+values ( 2017-07-23 ,47911800,2,8,"Escrito","f" );
 
 select ciudad.cod_ciudad,instituto.nom_instituto,ciudad.nom_departamento,ciudad.nom_ciudad
 from ciudad
