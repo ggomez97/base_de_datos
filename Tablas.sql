@@ -27,7 +27,7 @@ create table instituto
 create table orientacion 
 (
     cod_orientacion serial primary key constraint orientacion_primaria not null,
-    nom_orientacion varchar (20) not null,
+    nom_orientacion varchar (100) not null,
     descripcion lvarchar (400),
     baja boolean not null constraint orientacion_baja
 );
@@ -203,6 +203,86 @@ insert into relacion_persona_pertence_instituto (fk_cod_instituto,fk_ci_persona)
 values (3,55564155);
 insert into relacion_persona_pertence_instituto (fk_cod_instituto,fk_ci_persona)
 values (3,48543076)
+
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Administracion", '"Aca va una descripcion"',"f");
+
+
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Agrario", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Aviacion", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Construccion", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Deporte y Recreacion", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Electromecanica - Automotriz", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Electromecanica", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Electromecanica", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Electronica", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Energia Renovables", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Informatica", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Maquinista Naval", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Quimica Basica e Industrial", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Termodinamica", '"Aca va una descripcion"',"f");
+insert into orientacion (nom_orientacion, descripcion,baja)
+values ("Turismo", '"Aca va una descripcion"',"f");
+
+
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (2,"APT","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (2,"Adminsitracion y contabilidad Informatizada","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (2,"Comercializacion","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (2,"Contabilidad Superior" ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (2,"Economia y Finanzas","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (2,"Matematica A","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (2,"Matematica B","f");
+
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (3,"Agronegocios","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (3,"Administracion y Gestion de la Empresa Agropecuaria","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (3,"Fisica Aplicada a la Agrotecnologia III","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (3,"Quimica Aplicada a la Agrotecnologia III","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (3,"Sistemas Productivos Agrarios Vegetales","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (3,"Sistemas Productivos Agrarios Animal","f");
+
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,"Ingles Tecnico","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,"Fisica","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,"Sistemas de Control","f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,'Avionica I "Instrumentos"' ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,'Avionica II "Electricidad"' ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,'Avionica III "Comunicaciones"' ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,'Avionica IV "Navegacion"' ,"f");
+insert into materia (fk_cod_orientacion, nom_materia, baja)
+values (4,"Practicas y Materiales de Mantenimiento II" ,"f");
+
 
 
 
