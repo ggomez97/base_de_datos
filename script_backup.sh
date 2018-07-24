@@ -30,3 +30,5 @@ usuario=`whoami`
 
 tar -cvjf ~/respaldo/$fecha-$usuario-respaldo-home.tar ~/* 
 
+
+f
