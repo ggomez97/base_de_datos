@@ -1,17 +1,17 @@
 #!/bin/bash
-if [ ! -d ~/Escritorio/respaldo ]; then 
-	mkdir ~/Escritorio/respaldo 
+if [ ! -d ~/respaldo ]; then 
+	mkdir ~/respaldo 
 fi
 read -n1
 
-size="`du ~/Escritorio/Cisco | cut -d '/' -f1 | tail -1`"
-echo $size
 
 read -n1
 
-while [ $size -gt $150000 ] 
+while [ `du ~/respaldo | cut -d '/' -f1 | tail -1` -gt 20 ] 
 do
-	cd ~/Escritorio/Cisco	
+	echo `du ~/respaldo | cut -d '/' -f1 | tail -1`
+	read -p "algo"
+	cd ~/respaldo 	
 	
 	archivo="`ls -t | cut -d '/' -f 1 | tail -1`"
 	
@@ -19,29 +19,14 @@ do
     
 	read -n1
     
-	rm -R -i $archivo
+	rm -R $archivo
 
-	size="`du ~/Escritorio/Cisco | cut -d '/' -f1 | tail -1`"
-	echo $size
 
 	read -n1
 done
-cp -Rpa  ~/Escritorio/Cisco ~/Escritorio/respaldo 
 
-echo "Se hizo el respaldo en ~/Escritorio/respaldo"
+fecha=`date +%Y%m%d%H%M%S`
+usuario=`whoami`
 
-
-
-
-#!/bin/bash
-#if [ ! -d ~/Escritorio/respaldo ]; then 
-#	mkdir ~/Escritorio/respaldo 
-#fi
-
-#size="`du ~/Escritorio/Cisco | cut -d '/' -f1 | tail -1`"
-#echo $size
-#if [ $size -gt 100000 ] then
-#  echo("Entro")
-#fi
-
+tar -cvjf ~/respaldo/$fecha-$usuario-respaldo-home.tar ~/* 
 
