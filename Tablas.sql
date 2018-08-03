@@ -178,7 +178,7 @@ VALUES (15987414,"Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
 VALUES (45673164,"Victoria","Josefina","Perez","Gato","Docente","097318663","Minas","67",2,"","victoria.perez@gmail.com","F","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (24517632,"Ana","","Gamio","Rodrigez","Docente","094563219","Isla de flores","647",6,"","ana.gamio@gmail.com","F","f");
+VALUES (24517632,"Ana"," ","Gamio","Rodrigez","Docente","094563219","Isla de flores","647",6,"","ana.gamio@gmail.com","F","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
 VALUES (43267946,"Hubert","Isaul","Bravo","Caballero","Docente","092666999","Flores","6837",2,"","xxx@gmail.com","O","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
@@ -186,7 +186,7 @@ VALUES (16921234,"Kima","Soul","Reguetto","Perez","Alumno","092222999","Margarit
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
 VALUES (35469987,"Ice","Cube","Amerikka","Wanted","Alumno","092000999","Nipple","1237","", 9 ,"11xxx@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (55564155,"Rodrigo", "","Gonzales","Gutierrez","Alumno","091225430","Grecia","8437", "" , "" ,"42x51xx@gmail.com","M","f");
+VALUES (55564155,"Rodrigo", " ","Gonzales","Gutierrez","Alumno","091225430","Grecia","8437", "" , "" ,"42x51xx@gmail.com","M","f");
 
 insert into relacion_persona_pertence_instituto (fk_cod_instituto,fk_ci_persona)
 values (4,15987414);
