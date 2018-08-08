@@ -32,21 +32,13 @@ create table orientacion
     baja boolean not null constraint orientacion_baja
 );
 
-CREATE TABLE turnos
-( 
-    cod_turno serial primary key constraint turno_primaria not null,
-    tipo varchar (20) check (tipo in ('Matutino','Vespertino','Nocturno')) not null,
-    hora_inicio varchar (10) not null,
-    hora_fin varchar (10) not null,
-    baja boolean not null constraint turno_baja 
-);
-
  create table grupo 
 (
     cod_grupo serial primary key constraint grupo_primaria not null,
     nom_grupo varchar (10) not null,
+    turno VARCHAR (20) not null check (turno in ('Matutino','Vespertino','Nocturno')),
     fk_cod_orientacion integer references orientacion (cod_orientacion) constraint grupo_fk_cod_orientacion, 
-    fk_cod_turno integer references turnos (cod_turno) constraint grupo_fk_cod_turno not null,
+    fk_cod_instituto INTEGER REFERENCES instituto (cod_instituto) CONSTRAINT grupo_fk_cod_instituto,
     baja boolean not null constraint grupo_baja
 );
 
@@ -138,6 +130,8 @@ create table relacion_alumno_tiene_materia
     PRIMARY KEY (fk_cod_materia, fk_ci_alumno) CONSTRAINT relacion_alumno_tiene_materia_primarias
 );
 
+
+
 #########################################################################################
 INGRESO DE DATOS
 ########################################################################################
@@ -170,23 +164,23 @@ DA ERROR DE DATOS REPETIDO PERO ESTA BIEN IGUAL
 ############################################################################################################################################################################################################
 
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (47911800, "Martin", " " ,"Kasamajeu" , "del Pino" ,"Alumno", "092228484", "Camino de los granjeros", "4860","" ,"","martin@casamayou.net", "O", "f");
+VALUES (47911800, "Martin", NULL ,"Kasamajeu" , "del Pino" ,"Alumno", "092228484", "Camino de los granjeros", "4860",NULL ,NULL,"martin@casamayou.net", "O", "f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (48543076,"Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela","4117","" , 8 ,"gabito.mini@gmail.com","M","f");
+VALUES (48543076,"Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela","4117",NULL , 8 ,"gabito.mini@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (15987414,"Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro","117","","","pedro.jose@gmail.com","M","f");
+VALUES (15987414,"Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro","117",NULL,NULL,"pedro.jose@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (45673164,"Victoria","Josefina","Perez","Gato","Docente","097318663","Minas","67",2,"","victoria.perez@gmail.com","F","f");
+VALUES (45673164,"Victoria","Josefina","Perez","Gato","Docente","097318663","Minas","67",2,NULL,"victoria.perez@gmail.com","F","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (24517632,"Ana"," ","Gamio","Rodrigez","Docente","094563219","Isla de flores","647",6,"","ana.gamio@gmail.com","F","f");
+VALUES (24517632,"Ana",NULL,"Gamio","Rodrigez","Docente","094563219","Isla de flores","647",6,NULL,"ana.gamio@gmail.com","F","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (43267946,"Hubert","Isaul","Bravo","Caballero","Docente","092666999","Flores","6837",2,"","xxx@gmail.com","O","f");
+VALUES (43267946,"Hubert","Isaul","Bravo","Caballero","Docente","092666999","Flores","6837",2,NULL,"xxx@gmail.com","O","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (16921234,"Kima","Soul","Reguetto","Perez","Alumno","092222999","Margaritas","837","", 2 ,"2xxx@gmail.com","F","f");
+VALUES (16921234,"Kima","Soul","Reguetto","Perez","Alumno","092222999","Margaritas","837",NULL, 2 ,"2xxx@gmail.com","F","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (35469987,"Ice","Cube","Amerikka","Wanted","Alumno","092000999","Nipple","1237","", 9 ,"11xxx@gmail.com","M","f");
+VALUES (35469987,"Ice","Cube","Amerikka","Wanted","Alumno","092000999","Nipple","1237",NULL, 9 ,"11xxx@gmail.com","M","f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, baja)
-VALUES (55564155,"Rodrigo", " ","Gonzales","Gutierrez","Alumno","091225430","Grecia","8437", "" , "" ,"42x51xx@gmail.com","M","f");
+VALUES (55564155,"Rodrigo", NULL,"Gonzales","Gutierrez","Alumno","091225430","Grecia","8437", NULL , NULL ,"42x51xx@gmail.com","M","f");
 
 insert into relacion_persona_pertence_instituto (fk_cod_instituto,fk_ci_persona)
 values (4,15987414);
