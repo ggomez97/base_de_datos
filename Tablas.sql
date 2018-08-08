@@ -286,28 +286,23 @@ values (5,"Tecn. del Diseño de la Construccion III" ,"f");
 insert into materia (fk_cod_orientacion, nom_materia, baja)
 values (5,"Teoricas Constructivas Contemporaneas" ,"f");
 
-INSERT INTO turnos(tipo, hora_inicio, hora_fin,baja)
-VALUES ("Matutino", "6:55", "12:00", "f");
-INSERT INTO turnos(tipo, hora_inicio, hora_fin,baja)
-VALUES ("Vespertino", "12:35", "18:55", "f");
-INSERT INTO turnos(tipo, hora_inicio, hora_fin,baja)
-VALUES ("Nocturno", "19:00:", "23:55", "f");
 
-INSERT INTO grupo(nom_grupo, fk_cod_orientacion, fk_cod_turno, baja)
-VALUES ("3°AA",2, 1, "f");
-INSERT INTO grupo(nom_grupo, fk_cod_orientacion, fk_cod_turno, baja)
-VALUES ("3°AB",2, 1, "f");
-INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
-VALUES ("3°BA",3, 1, "f");
-INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
-VALUES ("3°BB",3, 2, "f");
-INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
-VALUES ("3°CA",4, 3, "f");
-INSERT INTO grupo(nom_grupo, fk_cod_orientacion,fk_cod_turno,baja)
-VALUES ("3°CB",4, 3, "f");
+INSERT INTO grupo(nom_grupo, turno, fk_cod_orientacion,fk_cod_instituto, baja)
+VALUES ("3°AA","Matutino",2, 1, "f");
+INSERT INTO grupo(nom_grupo, turno, fk_cod_orientacion,fk_cod_instituto, baja)
+VALUES ("3°AB","Matutino",2, 1, "f");
+INSERT INTO grupo(nom_grupo, turno, fk_cod_orientacion,fk_cod_instituto,baja)
+VALUES ("3°BA","Nocturno",3, 2, "f");
+INSERT INTO grupo(nom_grupo, turno, fk_cod_orientacion,fk_cod_instituto,baja)
+VALUES ("3°BB","Nocturno",3, 2, "f");
+INSERT INTO grupo(nom_grupo, turno, fk_cod_orientacion,fk_cod_instituto,baja)
+VALUES ("3°CA","Vespertino",4, 3, "f");
+INSERT INTO grupo(nom_grupo, turno, fk_cod_orientacion,fk_cod_instituto,baja)
+VALUES ("3°CB","Vespertino",4, 3, "f");
 
 insert into lista (fk_cod_grupo,fk_ci_docente, fk_cod_materia, baja)
 values (1,48543076,2,"f");
+
 insert into nota (fechahora,fk_ci_alumno,fk_cod_lista,nota,tipo_nota,baja)
 values ( 2017-07-23 ,47911800,2,8,"Escrito","f" );
 
