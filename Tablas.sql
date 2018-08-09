@@ -306,6 +306,39 @@ values (1,48543076,2,"f");
 insert into nota (fechahora,fk_ci_alumno,fk_cod_lista,nota,tipo_nota,baja)
 values ( 2017-07-23 ,47911800,2,8,"Escrito","f" );
 
+insert into relacion_alumno_pertence_grupo (fk_cod_grupo, fk_ci_alumno)
+values ( 1 ,48543076);
+insert into relacion_alumno_pertence_grupo (fk_cod_grupo, fk_ci_alumno)
+values ( 8 ,47911800);
+insert into relacion_alumno_pertence_grupo (fk_cod_grupo, fk_ci_alumno)
+values ( 2 ,15987414);
+insert into relacion_alumno_pertence_grupo (fk_cod_grupo, fk_ci_alumno)
+values ( 2 ,16921234);
+insert into relacion_alumno_pertence_grupo (fk_cod_grupo, fk_ci_alumno)
+values ( 3 ,55564155);
+
+insert into relacion_alumno_tiene_materia (fk_cod_materia, fk_ci_alumno, nota_final_materia)
+values (26 , 48543076, 8);
+insert into relacion_alumno_tiene_materia (fk_cod_materia, fk_ci_alumno, nota_final_materia)
+values (24 , 47911800, 12);
+insert into relacion_alumno_tiene_materia (fk_cod_materia, fk_ci_alumno, nota_final_materia)
+values (1 , 15987414, 1);
+insert into relacion_alumno_tiene_materia (fk_cod_materia, fk_ci_alumno, nota_final_materia)
+values (8, 16921234, 4);
+insert into relacion_alumno_tiene_materia (fk_cod_materia, fk_ci_alumno, nota_final_materia)
+values (1 , 55564155, 1);
+
+insert into relacion_docente_dicta_materia (fk_cod_materia, fk_ci_docente)
+values (26 , 48543076);
+insert into relacion_docente_dicta_materia(fk_cod_materia, fk_ci_docente)
+values (24 , 45673164);
+insert into relacion_docente_dicta_materia (fk_cod_materia, fk_ci_docente)
+values (1 , 24517632);
+insert into relacion_docente_dicta_materia (fk_cod_materia, fk_ci_docente)
+values (8, 43267946);
+
+
+
 select ciudad.cod_ciudad,instituto.nom_instituto,ciudad.nom_departamento,ciudad.nom_ciudad
 from ciudad
 inner join instituto on ciudad.cod_ciudad=instituto.fk_cod_ciudad;
