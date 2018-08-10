@@ -1,3 +1,5 @@
+CONNECT TO 'gestion_utu@miServidor' USER 'XXXNOMBREUSUARIOXXX'  USING 'XXXPASSWORDXXX';
+
 INSERT INTO relacion_alumno_pertenece_grupo(fk_cod_grupo, fk_ci_alumno)
 VALUES (1, 30035417);
 INSERT INTO relacion_alumno_pertenece_grupo(fk_cod_grupo, fk_ci_alumno)
