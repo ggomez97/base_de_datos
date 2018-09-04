@@ -53,7 +53,7 @@ CREATE TABLE persona
     telefono varchar (100) not null,
     dir_calle varchar (100) not null,
     dir_numero varchar (100) not null,
-    grado integer CHECK ( grado > 0 AND grado < 8),
+    grado integer CHECK ( grado > 0 AND grado < 7),
     nota_final_proyecto integer check (nota_final_proyecto > 0 AND nota_final_proyecto < 13),     
     email varchar (50),    
     sexo char not null CHECK (sexo IN ('M', 'F','O')),
@@ -79,7 +79,7 @@ create table lista
     baja boolean not null constraint baja_lista
 );
 
-create table nota
+create table 
 (
     cod_nota serial primary key constraint nota_primaria not null,
     fechaHora date null,    
