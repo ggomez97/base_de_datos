@@ -79,7 +79,7 @@ create table lista
     baja boolean not null constraint baja_lista
 );
 
-create table 
+create table nota
 (
     cod_nota serial primary key constraint nota_primaria not null,
     fechaHora date null,    
