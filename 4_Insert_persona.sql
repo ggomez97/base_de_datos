@@ -998,3 +998,21 @@ INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telef
 VALUES (59946586, "Sealtiel", "Edgardo", "Ortiz", "Ortega", "Alumno", "097249530", "Luis Alberto de Herrera", "1370", NULL, NULL, "SealtielOrtiz@outlook.com", "A", 1/2/2001, "t", "f");
 INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
 VALUES (59946940, "Seba", "Ojani", "Cano", "Suarez", "Alumno", "26692084", "Luis Alberto de Herrera", "2209", NULL, 8, "SebaCano@hotmail.com", "M", 22/6/1996, "f", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (47911800, "Martin", NULL ,"Kasamajeu" , "del Pino" ,"Alumno", "092228484", "Camino de los granjeros", "4860",NULL ,NULL,"martin@casamayou.net", "O",11/03/1999 ,"t", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (48543076,"Gabriel","Fernando","Gomez","Mendaro","Docente","092055380","Bernardo susviela","4117",NULL , 8 ,"gabito.mini@gmail.com","O",01/02/1993 ,"f", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (15987414,"Pedro","Jose","Aguiar","Rodrigez","Alumno","092987666","Castro","117",NULL,NULL,"pedro.jose@gmail.com","M",17/09/1969 ,"t", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (45673164,"Victoria","Josefina","Perez","Gato","Docente","097318663","Minas","67",2,NULL,"victoria.perez@gmail.com","F",04/09/1978 ,"f", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (24517632,"Ana",NULL,"Gamio","Rodrigez","Docente","094563219","Isla de flores","647",6,NULL,"ana.gamio@gmail.com","F",05/02/1995 ,"f", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (43267946,"Hubert","Isaul","Bravo","Caballero","Docente","092666999","Flores","6837",2,NULL,"xxx@gmail.com","O",28/07/1985 ,"f", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (16921234,"Kima","Soul","Reguetto","Perez","Alumno","092222999","Margaritas","837",NULL, 2 ,"2xxx@gmail.com","F",09/12/1993,"t", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (35469987,"Ice","Cube","Amerikka","Wanted","Alumno","092000999","Nipple","1237",NULL, 9 ,"11xxx@gmail.com","M",29/06/1997 ,"t", "f");
+INSERT INTO persona (ci, p_nombre, s_nombre, p_apellido, s_apellido, tipo, telefono, dir_calle, dir_numero, grado, nota_final_proyecto, email, sexo, fecha_nac, hace_proyecto, baja)
+VALUES (55564155,"Rodrigo", NULL,"Gonzales","Gutierrez","Alumno","091225430","Grecia","8437", NULL , NULL ,"42x51xx@gmail.com","M",11/07/1999,"t", "f");
