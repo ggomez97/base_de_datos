@@ -1,0 +1,95 @@
+CONNECT TO 'proyecto_x@miServidor' USER 'its'  USING '1234';
+
+grant connect to public;
+revoke all on ciudad from public;
+revoke all on grupo from public;
+grant select on grupo to public;
+revoke all on historico from public;
+grant insert on historico to public;
+revoke all on instituto from public;
+grant select on instituto to public;
+revoke all on materia from public;
+grant select on materia to public;
+revoke all on calificacion public;
+grant select on calificacion to public;
+revoke all on orientacion from public;
+grant select on orientacion to public;
+revoke all on persona from public;
+grant select on persona to public;
+revoke all on relacion_alumno_pertenece_grupo from public;
+grant select on relacion_alumno_pertenece_grupo to public;
+revoke all on relacion_alumno_tiene_materia from public;
+grant select on relacion_alumno_tiene_materia to public;
+revoke all on relacion_docente_dicta_materia from public;
+grant select on relacion_docente_dicta_materia to public;
+revoke all on relacion_persona_pertenece_instituto from public;
+grant select on relacion_persona_pertenece_instituto to public;
+grant select on alumnos_de_lista to public;
+revoke all on grupos_estudiantes_docentes_en_instituto from public;
+
+create role admin;
+grant resource to 'usuario.admin';
+grant default role admin to 'usuario.admin'; 
+set role admin;
+grant all on ciudad to admin;
+grant all on grupo to admin;
+grant all on historico to admin;
+grant all on instituto to admin;
+grant all on materia to admin;
+grant all on calificacion to admin;
+grant all on orientacion to admin;
+grant all on persona to admin;
+grant all on relacion_alumno_pertenece_grupo to admin;
+grant all on relacion_alumno_tiene_materia to admin;
+grant all on relacion_docente_dicta_materia to admin;
+grant all on relacion_persona_pertenece_instituto to admin;
+grant all on alumnos_de_lista to admin;
+grant all on grupos_estudiantes_docentes_en_instituto to admin;
+
+
+create role docente;
+grant connect to 'usuario.docente'; 
+grant default role docente to 'usuario.docente'; 
+set role docente;
+grant select on ciudad to docente;
+grant select on instituto to docente;
+grant select on grupo to docente;
+grant select,update on persona to docente;
+grant select on orientacion to docente;
+grant select,update,insert on calificacion to docente;
+grant insert on historico to docente;
+grant select on lista to docente;
+grant select on materia to docente;
+grant select on relacion_alumno_pertenece_grupo to docente;
+grant select, update on relacion_alumno_tiene_materia to docente;
+grant select on relacion_docente_dicta_materia to docente;
+grant select on relacion_persona_pertenece_instituto to docente;
+grant select on promedio_grupo_materia to docente;
+grant select on listado_alumnos_instituto to docente;
+grant select on alumnos_de_lista to docente;
+revoke all on grupos_estudiantes_docentes_en_instituto from docentes;
+
+
+
+
+create role gestion;
+grant connect to 'usuario.gestion'; 
+grant default role gestion to 'usuario.gestion'; 
+set role gestion;
+grant select on ciudad to gestion;
+grant select on instituto to gestion;
+grant select,update,insert on grupo to gestion;
+grant select,insert,update on persona to gestion;
+grant select,insert,update on orientacion to gestion;
+grant select,update,insert on calificacion to gestion;
+grant insert on historico to gestion;
+grant select,insert,update on lista to gestion;
+grant select,insert,update on materia to gestion;
+grant select,insert,update on relacion_alumno_pertenece_grupo to gestion;
+grant select,update,insert on relacion_alumno_tiene_materia to gestion;
+grant select,update,insert on relacion_docente_dicta_materia to gestion;
+grant select,update,insert on relacion_persona_pertenece_instituto to gestion;
+grant select on promedio_grupo_materia to gestion;
+grant select on listado_alumnos_instituto to gestion;
+grant select on alumnos_de_lista to gestion;
+grant select on grupos_estudiantes_docentes_en_instituto to gestion;
